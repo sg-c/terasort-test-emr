@@ -20,11 +20,6 @@ function run-dfsio() {
         -b alluxio://MASTER_HOSTNAME:29998/dfsio/
 }
 
-P=50
-S=1000
-E=25
-C=2
-
 function testMultiRuns() {
     run-dfsio $P $S w $E $C
     echo "----------------- Done 1st Write -----------------"
@@ -48,9 +43,19 @@ function testWRR() {
     echo "----------------- Done $1 Run -----------------"
 }
 
+function genData() {
+    run-dfsio $P $S w $E $C
+}
+
+P=500
+S=100
+E=10
+C=2
+
 echo "================= BEG ($(date -Iminutes)) ================="
 echo "================= [-p $P -s $S -e $E -c $C] ================="
-testWRR 1
-testWRR 2
-testWRR 3
+# testWRR 1
+# testWRR 2
+# testWRR 3
+genData
 echo "================= END ($(date -Iminutes)) ================="

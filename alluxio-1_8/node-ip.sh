@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # PUB_IPS=(master_pub_ip, worker1_pub_ip, worker2_pub_ip, ...)
-declare -a PUB_IPS=(34.201.129.133 54.174.29.199 54.161.185.177 3.82.223.153 44.202.144.168 54.159.149.170)
+declare -a PUB_IPS=(34.207.67.194 44.201.189.83 3.83.243.171)
 
 # PRV_IPS=(master_prv_ip, worker1_prv_ip, worker2_prv_ip, ...)
-declare -a PRV_IPS=(172.31.83.240 172.31.80.124 172.31.86.1 172.31.84.126 172.31.85.130 172.31.81.235)
+declare -a PRV_IPS=(172.31.89.6 172.31.80.182 172.31.92.238)
 
 declare -a HOSTNAMES=()
 
