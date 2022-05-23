@@ -14,6 +14,8 @@ function run_load_test() {
 
     sleep 5 # wait for all data are freed
 
+    echo "Alluxio cache usage: $(alluxio fsadmin report | grep -i 'used capacity')"
+
     echo "start to load data"
     [[ $(alluxio version) == "1.8"* ]] && time alluxio fs load /dfsio | grep "real"
     [[ $(alluxio version) == *"2."* ]] && time alluxio fs distributedLoad /dfsio | grep "real"
