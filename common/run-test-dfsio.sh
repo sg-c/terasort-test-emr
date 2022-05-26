@@ -47,7 +47,7 @@ function genData() {
     run-dfsio $P $S w $E $C
 }
 
-P=5000
+P=100
 S=10
 E=10
 C=2
